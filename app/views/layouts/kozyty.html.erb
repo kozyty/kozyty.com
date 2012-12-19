@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "application" %>
+	
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+
+  <!-- For third-generation iPad with high-resolution Retina display: -->
+  <%# <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144-precomposed.png"> %>
+  <!-- For iPhone with high-resolution Retina display: -->
+  <%# <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114-precomposed.png"> %>
+  <!-- For first- and second-generation iPad: -->
+  <%# <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72-precomposed.png"> %>
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <%# <link rel="apple-touch-icon-precomposed" href="images/favicons/apple-touch-icon-precomposed.png"> %>
+
+  <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon" />
+
+  <meta name="keywords" content="kozyty, foundation, frameworks, framework, html5, css3, SASS, SCSS, compass, responsive, php, ruby, rails, CakePHP, shinatra" />
+  <meta name="description" content="Kozyty.com" />
+  <meta name="author" content="Kozyty" />
+  <meta name="copyright" content="Kozyty. Copyright (c) 2012" />
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="/assets/foundation.top-bar.css">
+  <link rel="stylesheet" href="/assets/mega-drop.css">
+  <link rel="stylesheet" href="/assets/presentation.css">
+
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <!-- Header -->
+  <div class="container top-bar home-border">
+    <div class="attached">
+      <div class="name" onclick="void(0);">
+        <span><a href="http://kozyty.com">Kozyty.com</a> <a href="javascript:;" class="toggle-nav"></a></span>
+      </div>
+
+      <ul class="right">
+        <li class="show-for-small">
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/features" >Features</a>
+        </li>
+        <li>
+          <a href="/blogs">Blogs</a>
+        </li>
+        <li>
+          <a href="/reviews" >Reviews</a>
+        </li>
+        <li>
+          <a href="/photos">Photos</a>
+        </li>
+        <li>
+          <a href="http://github.com/kozyty">GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INSERT MEGA DROP DOWN HERE -->
+  <div class="container" id="megaDrop">
+    <div class="mobile-main-nav-padding">
+
+      <div class="row top">
+        <div class="eight columns">
+          <%# <a href="/"><h4><img alt="drop-down" src="http://www.zurb.com/assets/logo/zurb-logo-drop-down-ec71ef7b6be82b12ab4a64a655377e1f.png" />Kozyty.com へようこそ</h4></a> %>
+          <a href="/"><h4>Kozyty.com へようこそ</h4></a>
+        </div>
+        <div class="four columns">
+          <div class="right links">
+            <a href="/about">About</a> | <a href="/blogs">Blogs</a> | <a href="/sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="tablet-padding">
+          <div class="three columns property" id="services">
+            <a href="/about">
+              <h4>Who am i?</h4>
+              <p>nanapi で エンジニアをやっています。ネット上では「こじてぃ」で活動しています。よろしくおねがいします。</p>
+              <span>もっと見る&rarr;</span>
+            </a>
+          </div>
+
+          <div class="three columns property" id="foundation">
+            <a href="/favorites">
+              <h4>My favorites.</h4>
+              <p>言語は、ruby, PHP, vim-script あたりがメインです。その他ツール系が好きです。git 大好き！</p>
+              <span>技術系以外も色々好きです&rarr;</span>
+            </a>
+          </div>
+          <div class="three columns property" id="apps">
+            <a href="/apps">
+              <h4>My apps.</h4>
+              <p>現在は公開しているアプリはありません、今後iPhoneアプリやWebアプリ中心に公開してきたいですね。</p>
+              <span>Now working...&rarr;</span>
+            </a>
+          </div>
+
+          <div class="three columns property" id="expo">
+            <a href="/blogs">
+              <h4>My Blogs.</h4>
+              <p>ブログもやってます、技術系とかパン・育児ネタとかも色々書いていくつもりです。</p>
+              <span>ブログを見に行く&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- /Header -->
+
+  <%= yield %>
+
+  <!-- /Footer -->
+  <div id="copyright">
+    <div class="row">
+      <div class="four columns">
+        <p>Site content &copy; 2012 Kozyty.</p>
+      </div>
+      <div class="eight columns">
+        <ul class="inline-list right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/blogs">Blogs</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/photos">Photos</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/marketing.js"></script>
+  <script src="/assets/mega-drop.js"></script>
+
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(
+      ['_setAccount', ''],
+      ['_trackPageview'],
+    );
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    $(document).on('click', '[data-src-download]', function(event){
+      var version = $(event.currentTarget).attr('data-src-download');
+      _gaq.push(['_trackEvent', 'Foundation', 'Downloaded', version]);
+    });
+
+    // Template Toggle for Customizer
+    $('.toggle-layer').find('input[type=checkbox]').on('click', function() {
+      if ($(this).is(':checked')) {
+      $('#fndTemps').slideDown();
+      } else {
+      $('#fndTemps').slideUp();
+      }
+    });
+
+    $('#fndTemps > div > div > div > div > a').on('click', function(e) {
+      e.preventDefault();
+      $(this).toggleClass('selected');
+      $(this).find(':input[type=checkbox]').attr('checked', $(this).hasClass('selected'));
+    });
+
+  </script>
+</body>
+</html>
