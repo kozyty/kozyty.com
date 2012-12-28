@@ -29,7 +29,6 @@ production:
   database: kozyty
   host: localhost
   username: root
-  password: "kjmta4ec"
   encoding: utf8
   pool: 5
   timeout: 5000
@@ -39,5 +38,4 @@ development:
   database: kozyty_development
   host: localhost
   username: root
-  password: "kjmta4ec"
   encoding: utf8
