@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "こじてぃのサイト | Kozyty.com" %></title>
   
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
@@ -32,17 +32,17 @@
   <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
   <%# <link rel="apple-touch-icon-precomposed" href="images/favicons/apple-touch-icon-precomposed.png"> %>
 
-  <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/assets/favicons/favicon.ico" type="image/x-icon" />
 
   <meta name="keywords" content="kozyty, foundation, frameworks, framework, html5, css3, SASS, SCSS, compass, responsive, php, ruby, rails, CakePHP, shinatra" />
   <meta name="description" content="Kozyty.com" />
   <meta name="author" content="Kozyty" />
-  <meta name="copyright" content="Kozyty. Copyright (c) 2012" />
+  <meta name="copyright" content="Kozyty. Copyright (c) 2013" />
 
   <!-- Included CSS Files -->
-  <link rel="stylesheet" href="/assets/foundation.top-bar.css">
-  <link rel="stylesheet" href="/assets/mega-drop.css">
-  <link rel="stylesheet" href="/assets/presentation.css">
+  <%# <link rel="stylesheet" href="/assets/foundation.top-bar.css"> %>
+  <%# <link rel="stylesheet" href="/assets/mega-drop.css"> %>
+  <%# <link rel="stylesheet" href="/assets/presentation.css"> %>
 
 
   <!-- IE Fix for HTML5 Tags -->
@@ -159,14 +159,14 @@
     </div>
   </div>
 
-  <script src="/assets/marketing.js"></script>
-  <script src="/assets/mega-drop.js"></script>
+  <%# <script src="/assets/marketing.js"></script> %>
+  <%# <script src="/assets/mega-drop.js"></script> %>
 
   <script>
     var _gaq = _gaq || [];
     _gaq.push(
       ['_setAccount', ''],
-      ['_trackPageview'],
+      ['_trackPageview']
     );
 
     (function() {
